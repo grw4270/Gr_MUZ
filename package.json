@@ -1,0 +1,19 @@
+{
+  "name": "gr_muz",
+  "version": "1.0.R",
+  "description": "Bot Discord do odtwarzania plików zarządzalnych z GUI.",
+  "main": "./muz/index.js",
+  "scripts": {
+    "start:bot": "node ./muz/index.js",
+    "start:gui": "npm start --prefix ./muz-gui",
+    "install:all": "npm install && npm install --prefix ./muz-gui"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.19.0",
+    "@snazzah/davey": "^0.1.7",
+    "discord.js": "^14.23.2",
+    "dotenv": "^17.2.3",
+    "play-dl": "^1.9.7"
+  }
+}
