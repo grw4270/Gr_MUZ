@@ -114,11 +114,6 @@ app.get('/api/servers', ensureAuth, async (req, res) => {
 
     // ===== Jeśli właściciel — wszystko + com/default =====
     if (user.id === OWNER_ID) {
-      const ownerList = [
-        ...folders,
-        { id: 'com', name: 'com (globalne)' },
-        { id: 'default', name: 'default (globalne)' }
-      ];
       log(`👑 OWNER ${user.username} pobiera listę ${ownerList.length} serwerów`);
       return res.json(ownerList);
     }
